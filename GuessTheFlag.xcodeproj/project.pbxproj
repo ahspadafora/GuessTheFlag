@@ -13,6 +13,7 @@
 		BA482B8A252EB554006E1C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA482B89252EB554006E1C62 /* Assets.xcassets */; };
 		BA482B8D252EB554006E1C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA482B8C252EB554006E1C62 /* Preview Assets.xcassets */; };
 		BA482B90252EB554006E1C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA482B8E252EB554006E1C62 /* LaunchScreen.storyboard */; };
+		BA482BDE252FB286006E1C62 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA482BDD252FB286006E1C62 /* FlagImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BA482B8C252EB554006E1C62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA482B8F252EB554006E1C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA482B91252EB554006E1C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA482BDD252FB286006E1C62 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BA482B8E252EB554006E1C62 /* LaunchScreen.storyboard */,
 				BA482B91252EB554006E1C62 /* Info.plist */,
 				BA482B8B252EB554006E1C62 /* Preview Content */,
+				BA482BDD252FB286006E1C62 /* FlagImage.swift */,
 			);
 			path = GuessTheFlag;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				BA482B84252EB550006E1C62 /* AppDelegate.swift in Sources */,
 				BA482B86252EB550006E1C62 /* SceneDelegate.swift in Sources */,
 				BA482B88252EB550006E1C62 /* ContentView.swift in Sources */,
+				BA482BDE252FB286006E1C62 /* FlagImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
