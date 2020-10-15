@@ -12,11 +12,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
-    @State private var isShowingAlert = false
     @State private var scoreTitle = ""
     @State private var score = 0
-    
-    @State private var isCorrect = false
     @State private var animationAmount: Double = 0
     
     
@@ -44,10 +41,6 @@ struct ContentView: View {
                 Text("Score: \(score)").foregroundColor(.white)
                 Spacer()
             }
-        }.alert(isPresented: $isShowingAlert) { () -> Alert in
-            Alert(title: Text(scoreTitle), message: Text("Your score is \(score)"), dismissButton: .default(Text("Continue")) {
-                self.askQuestion()
-            })
         }
     }
 
@@ -56,7 +49,6 @@ struct ContentView: View {
             scoreTitle = "Correct!"
             score += 1
             animationAmount += 360
-            isCorrect = true
         } else {
             scoreTitle = "Wrong! The is the flag of \(countries[number])"
             score -= 1
@@ -64,13 +56,11 @@ struct ContentView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
             self.askQuestion()
         }
-        
-        //isShowingAlert = true
+
     }
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
-        isCorrect = false
     }
 }
 
