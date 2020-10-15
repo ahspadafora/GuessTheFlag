@@ -38,7 +38,7 @@ struct ContentView: View {
                         FlagImage(image: Image(self.countries[number]))
                     }
                     .rotation3DEffect(.degrees(self.animationAmount),
-                                      axis: (x: 0, y: 1, z: 0))
+                                      axis: (x: 0, y: (number == self.correctAnswer ? 1 : 0), z: 0))
                     
                 }
                 Text("Score: \(score)").foregroundColor(.white)
@@ -56,16 +56,21 @@ struct ContentView: View {
             scoreTitle = "Correct!"
             score += 1
             animationAmount += 360
+            isCorrect = true
         } else {
             scoreTitle = "Wrong! The is the flag of \(countries[number])"
             score -= 1
         }
-        self.askQuestion()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+            self.askQuestion()
+        }
+        
         //isShowingAlert = true
     }
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        isCorrect = false
     }
 }
 
